@@ -17,11 +17,13 @@ class vscode::config {
 
   file { $vscode_user_settings_file_path:
     ensure  => 'file',
+    source  => 'puppet:///modules/vscode/settings.json',
     require => File[$vscode_user_config_directory],
   }
 
   file { $vscode_user_keybinds_file_path:
     ensure  => 'file',
+    source  => 'puppet:///modules/vscode/keybindings.json',
     require => File[$vscode_user_config_directory],
   }
 }
