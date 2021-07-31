@@ -11,7 +11,7 @@ class vscode::install {
   }
 
   package { 'Microsoft Visual Studio Code':
-    ensure          => 'present',
+    ensure          => 'installed',
     source          => 'C:\\Windows\\temp\\VSCodeSetup-x64-1.58.2.exe',
     install_options => [
       '/verysilent',
