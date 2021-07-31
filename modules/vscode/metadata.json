@@ -2,9 +2,9 @@
   "name": "devynspencer-vscode",
   "version": "0.1.0",
   "author": "Devyn Spencer",
-  "summary": "",
+  "summary": "Installs and configures Microsoft Visual Studio Code.",
   "license": "MIT",
-  "source": "",
+  "source": "https://github.com/devynspencer/puppet-workstation",
   "dependencies": [
 
   ],
