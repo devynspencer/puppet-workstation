@@ -6,7 +6,10 @@
   "license": "MIT",
   "source": "https://github.com/devynspencer/puppet-workstation",
   "dependencies": [
-
+    {
+      "name": "puppet-windows_env",
+      "version_requirement": ">= 4.0.1"
+    }
   ],
   "operatingsystem_support": [
     {

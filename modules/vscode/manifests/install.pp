@@ -19,4 +19,6 @@ class vscode::install {
     ],
     require         => File['C:\\Windows\\temp\\VSCodeSetup-x64-1.58.2.exe'],
   }
+
+  windows_env { 'PATH=C:\\Program Files\\Microsoft VS Code\\bin': }
 }
