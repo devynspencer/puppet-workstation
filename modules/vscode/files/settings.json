@@ -6,5 +6,8 @@
     "editor.insertSpaces": true,
     "files.insertFinalNewline": true
   },
+  "[puppetfile]": {
+    "editor.defaultFormatter": "rebornix.ruby"
+  },
   "puppet.installType": "pdk"
 }
