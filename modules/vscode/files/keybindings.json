@@ -1,5 +1,31 @@
 // this file is managed by puppet
 
 [
-
+  {
+    "key": "ctrl+k ctrl+m",
+    "command": "-workbench.extensions.action.showRecommendedKeymapExtensions"
+  },
+  {
+    "key": "ctrl+g ctrl+m",
+    "command": "git.stageSelectedRanges",
+    "when": "isInDiffEditor"
+  },
+  {
+    "key": "ctrl+k ctrl+alt+s",
+    "command": "-git.stageSelectedRanges",
+    "when": "isInDiffEditor"
+  },
+  {
+    "key": "ctrl+g ctrl+n",
+    "command": "git.unstageSelectedRanges",
+    "when": "isInDiffEditor"
+  },
+  {
+    "key": "ctrl+g ctrl+k",
+    "command": "git.commitStaged"
+  },
+  {
+    "key": "ctrl+g ctrl+l",
+    "command": "git.commitStagedAmendNoVerify"
+  }
 ]
