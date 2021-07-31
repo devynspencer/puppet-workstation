@@ -1,6 +1,14 @@
 // this file is managed by puppet
 
 {
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.tabSize": 4
+  },
+  "[powershell]": {
+    "editor.defaultFormatter": "ms-vscode.powershell",
+    "editor.tabSize": 4
+  },
   "[puppet]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
