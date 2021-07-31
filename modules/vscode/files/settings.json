@@ -1,5 +1,10 @@
 // this file is managed by puppet
 
 {
-
+  "[puppet]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "files.insertFinalNewline": true
+  },
+  "puppet.installType": "pdk"
 }
