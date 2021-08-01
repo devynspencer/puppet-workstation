@@ -12,3 +12,5 @@ fixtures:
     puppetlabs-pwshlib:
       repo: puppetlabs/pwshlib
       ref: 0.10.0
+    puppetlabs-stdlib:
+      repo: puppetlabs/stdlib
