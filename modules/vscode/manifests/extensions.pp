@@ -31,6 +31,7 @@ class vscode::extensions {
   $vscode_extensions.each | $extension | {
     exec { "install_vscode_extension_name_${extension}":
       command  => "code --install-extension ${extension}",
+      unless   => "if ((code --list-extensions) -notcontains '${extension}') { exit 1 }",
       provider => 'powershell',
     }
   }
