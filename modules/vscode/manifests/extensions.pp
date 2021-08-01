@@ -33,6 +33,7 @@ class vscode::extensions {
       command  => "code --install-extension ${extension}",
       unless   => "if ((code --list-extensions) -notcontains '${extension}') { exit 1 }",
       provider => 'powershell',
+      require  => Class['vscode::install']
     }
   }
 }
