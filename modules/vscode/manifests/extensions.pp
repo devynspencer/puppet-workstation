@@ -1,6 +1,6 @@
 # @summary Installs Visual Studio Code extensions
 #
-# Installs each extension in the $vscode_extensions array. Uses the Visual Studio Code
+# Installs each extension listed in $vscode::extensions. Uses the Visual Studio Code
 # executable to determine if an extension is installed, and if not installs it.
 #
 # @example
