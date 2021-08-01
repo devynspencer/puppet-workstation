@@ -1,1 +1,31 @@
 ---
+
+vscode::download_url: 'https://az764295.vo.msecnd.net/stable/c3f126316369cd610563c75b1b1725e0679adfb3/VSCodeSetup-x64-1.58.2.exe'
+
+vscode::download_file_path: 'C:\\Windows\\temp\\VSCodeSetup-x64-1.58.2.exe'
+
+vscode::extensions:
+  - 'ms-azuretools.vscode-docker'
+  - 'ms-kubernetes-tools.vscode-kubernetes-tools'
+  - 'ms-python.python'
+  - 'ms-python.vscode-pylance'
+  - 'ms-toolsai.jupyter'
+  - 'ms-vscode-remote.remote-containers'
+  - 'ms-vscode-remote.remote-ssh-edit'
+  - 'ms-vscode-remote.remote-ssh'
+  - 'ms-vscode-remote.remote-wsl'
+  - 'ms-vscode.powershell'
+  - 'puppet.puppet-vscode'
+  - 'rebornix.ruby'
+  - 'redhat.vscode-xml'
+  - 'redhat.vscode-yaml'
+
+vscode::user_code_directory: "%{facts.windows_env.APPDATA}\\Code"
+
+vscode::user_config_directory: "%{lookup('vscode::user_code_directory')}\\User"
+
+vscode::user_settings_file_path: "%{lookup('vscode::user_config_directory')}\\settings.json"
+
+vscode::user_keybinds_file_path: "%{lookup('vscode::user_config_directory')}\\keybindings.json"
+
+vscode::extensions_directory: "%{facts.windows_env.USERPROFILE}\\.vscode\\extensions"

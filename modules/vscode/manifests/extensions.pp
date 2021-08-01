@@ -6,29 +6,11 @@
 # @example
 #   include vscode::extensions
 class vscode::extensions {
-  $vscode_extensions_directory = "${facts['windows_env']['USERPROFILE']}\\.vscode\\extensions"
-  $vscode_extensions = [
-    'ms-azuretools.vscode-docker',
-    'ms-kubernetes-tools.vscode-kubernetes-tools',
-    'ms-python.python',
-    'ms-python.vscode-pylance',
-    'ms-toolsai.jupyter',
-    'ms-vscode-remote.remote-containers',
-    'ms-vscode-remote.remote-ssh-edit',
-    'ms-vscode-remote.remote-ssh',
-    'ms-vscode-remote.remote-wsl',
-    'ms-vscode.powershell',
-    'puppet.puppet-vscode',
-    'rebornix.ruby',
-    'redhat.vscode-xml',
-    'redhat.vscode-yaml',
-  ]
-
-  file { $vscode_extensions_directory:
+  file { $vscode::extensions_directory:
     ensure => 'directory'
   }
 
-  $vscode_extensions.each | $extension | {
+  $vscode::extensions.each | $extension | {
     exec { "vscode_extension_${extension}":
       command  => "code --install-extension ${extension}",
       unless   => "if ((code --list-extensions) -notcontains '${extension}') { exit 1 }",

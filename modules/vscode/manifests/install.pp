@@ -5,19 +5,19 @@
 # @example
 #   include vscode::install
 class vscode::install {
-  file { 'C:\\Windows\\temp\\VSCodeSetup-x64-1.58.2.exe':
+  file { $vscode::download_file_path:
     ensure => 'file',
-    source => 'https://az764295.vo.msecnd.net/stable/c3f126316369cd610563c75b1b1725e0679adfb3/VSCodeSetup-x64-1.58.2.exe'
+    source => $vscode::download_url
   }
 
   package { 'Microsoft Visual Studio Code':
     ensure          => 'installed',
-    source          => 'C:\\Windows\\temp\\VSCodeSetup-x64-1.58.2.exe',
+    source          => $vscode::download_file_path,
     install_options => [
       '/verysilent',
       'mergetasks=!runCode,!desktopicon,!quicklaunchicon,addcontextmenufiles,addcontextmenufolders,addtopath',
     ],
-    require         => File['C:\\Windows\\temp\\VSCodeSetup-x64-1.58.2.exe'],
+    require         => File[$vscode::download_file_path],
   }
 
   windows_env { 'PATH=C:\\Program Files\\Microsoft VS Code\\bin': }
