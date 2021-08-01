@@ -3,4 +3,12 @@
 ---
 fixtures:
   forge_modules:
-#     stdlib: "puppetlabs/stdlib"
+    puppet-windows_env:
+      repo: puppet/windows_env
+      ref: 4.0.1
+    puppetlabs-powershell:
+      repo: puppetlabs/powershell
+      ref: 5.0.0
+    puppetlabs-pwshlib:
+      repo: puppetlabs/pwshlib
+      ref: 0.10.0
